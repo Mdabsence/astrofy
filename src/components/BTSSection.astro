@@ -1,0 +1,112 @@
+---
+// components/BTSSection.astro
+---
+<div class="bts-container">
+  <h1>Qu'est-ce que le BTS SIO <span class="emoji">🎓</span> ?</h1>
+  
+  <p class="intro">
+    Avant de vous présenter mon entreprise et mes projets, je vous propose de vous présenter en premier lieu la filière à laquelle je suis affecté.
+  </p>
+  
+  <p class="description">
+    Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (<span>BTS SIO</span>), s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégré directement le marché du travail ou continuer des études, dans le domaine de l'informatique.
+  </p>
+  
+  <h2>Le BTS SIO propose deux spécialités :</h2>
+  
+  <div class="options">
+    <div class="option">
+      <h3>Option SISR</h3>
+      <p>L’option Solution d’infrastructure, systèmes et réseaux forme des professionnels des réseaux et équipements informatiques (installation, maintenance, sécurité). En sortant d’un <span>BTS SIO SISR</span>, vous serez capables de gérer et d’administrer le réseau d’une société et d’assurer sa sécurité et sa maintenance.</p>
+      <p>Les techniciens supérieurs en informatique option <span>SISR</span>, peuvent accéder aux métiers de :</p>
+      <ul>
+        <li>Administrateur systèmes et réseaux</li>
+        <li>Informaticien support et déploiement</li>
+        <li>Pilote d'exploitation</li>
+        <li>Support systèmes et réseaux</li>
+        <li>Technicien d’infrastructure</li>
+        <li>Technicien de production</li>
+        <li>Technicien micro et réseaux</li>
+      </ul>
+    </div>
+    
+    <div class="option">
+      <h3>Option SLAM</h3>
+      <p>L’option Solutions logicielles et applications métiers forme des spécialistes des logiciels (rédaction d’un cahier des charges, formulation des besoins et spécifications, développement, intégration au sein de la société).</p>
+      <p>Les techniciens supérieurs en informatique option <span>SLAM</span>, sont préparés aux métiers de :</p>
+      <ul>
+        <li>Développeur d’applications informatiques</li>
+        <li>Développeur informatique</li>
+        <li>Analyste d’applications ou d’études</li>
+        <li>Analyste programmeur</li>
+        <li>Programmeur analyste</li>
+        <li>Programmeur d’applications</li>
+        <li>Responsable des services applicatifs</li>
+        <li>Technicien d’études informatiques</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bts-container {
+    font-family: Arial, sans-serif;
+    color: #444;
+  }
+
+  .bts-container h1 {
+    color: #E74C3C;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+
+  .bts-container h1 .emoji {
+    font-size: 1.2em;
+  }
+
+  .bts-container .intro, .bts-container .description {
+    margin-bottom: 20px;
+  }
+
+  .bts-container .description span {
+    font-weight: bold;
+  }
+
+  .bts-container h2 {
+    color: #444;
+    font-size: 1.4em;
+    margin-top: 40px;
+  }
+
+  .bts-container .options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .bts-container .option {
+    width: 48%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .bts-container .option h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+  .bts-container .option h3 .icon {
+    font-size: 1.1em;
+  }
+
+  .bts-container .option ul {
+    padding-left: 20px;
+  }
+
+  .bts-container .option ul li {
+    list-style-type: '›';
+    margin-bottom: 5px;
+  }
+</style>
