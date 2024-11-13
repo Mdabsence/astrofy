@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 
@@ -11,19 +12,17 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Bonjour👋</div>
-    <div class="text-5xl font-bold">Je suis Mathias Dabsence</div>
-    <div class="text-3xl py-3 font-bold">Etudiant en 2ème année de BTS SIO</div>
+    <div class="text-xl py-1">Bienvenue sur le portfolio de</div>
+    <div class="text-5xl font-bold">Mathias Dabsence</div>
+    <div class="text-3xl py-3 font-bold">Etudiant en 2ème année de BTS SIO option SISR</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        &nbsp;&nbsp;&nbsp;&nbsp;Âgé de 20 ans, je suis actuellement étudiant à Montreuil au lycée ORT Daniel Mayer, en deuxième année de BTS « SIO spécialité SISR » Services Informatiques aux Organisations spécialité en Solutions d'Infrastructure, Systèmes et Réseaux. J’ai toujours été attiré par l’informatique et les nouvelles technologies. C’est pour cela qu'après avoir raté mes partiels de médecine, je me suis tourné vers ces études.
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Consulter mon CV </a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
+      <a class="btn" href="./public/CV-Mathias.pdf" target="_blank"> Consulter mon CV </a>
+      <a href="./public/CV-Mathias.pdf" download="CV-Mathias.pdf" target="_blank" class="btn btn-outline ml-5">
         Télécharger mon CV
       </a>
     </div>
@@ -33,46 +32,47 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl w-full font-bold mb-2">Mon Parcours</div>
   </div>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Mes Losirs</div>
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="BTS SERVICE INFORMATIQUE AUX ORGANISATIONS"
+      subtitle="2023 à 2025 au Lycée ORT Daniel Mayer, 93100 - Montreuil"
+    />
+    <TimeLineElement
+      title="PARCOURS D'ACCÈS SPÉCIFIQUE SANTÉ (partiel échoué)"
+      subtitle="2022 à 2023 à l'Université Sorbonne Paris Nord, 93000 - Bobigny"
+    />
+    <TimeLineElement
+      title="BACCALAURÉAT GÉNÉRALE - Spécialités SVT - Physique Chimie - Option Mathématique Complémentaire"
+      subtitle="2022 au Lycée Jean Zay, 93600 - Aulnay-sous-Bois"
+    />
   </div>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+  <div>
+    <div class="text-3xl w-full font-bold mb-2 mt-10">Expériences professionnelles</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="APPRENTI ADMINISTRATEUR RÉSEAU"
+      subtitle="2023 à 2025 à la Caisse Centrale des Activités Social (CCAS), 93100 - Montreuil"
+    />
+    <TimeLineElement
+      title="POMPIER VOLONTAIRE"
+      subtitle="Depuis août 2024 au Centre d'Incendie et de Secours de Villeparisis, 77270 "
+    />
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2 mt-10">Projet professionnel </div>
+  </div>
+
+  <div class="py-2">
+      <text class="text-lg">
+        &nbsp;&nbsp;&nbsp;&nbsp;Professionnellement, je souhaite m’orienter vers le secteur de la cybersécurité.
+        C'est pourquoi, après l’obtention de mon BTS SIO - BAC+2 , je souhaiterais poursuivre mon cursus en suivant une formation d'ingénieur - BAC+5.
+        Cette formation est proposé par l'école d'ingenieur l'ESIEA en alternance avec la possibilité de prendre cybersécurité en majeure.
+        Je souhaite continuer ma formation par le biais de l'apprentissage en alternance afin d’acquérir une expérience professionnelle, et de pouvoir confronter mes connaissances théoriques aux réalités du terrain.
+      </text>
+    </div>
+  </div>
 </BaseLayout>
