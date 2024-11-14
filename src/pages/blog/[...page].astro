@@ -15,73 +15,190 @@ const { page } = Astro.props;
 
 <BaseLayout title="Blog" sideBarActiveItemID="blog">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Blog</div>
+    <div class="text-3xl w-full font-bold">Mes certifications</div>
   </div>
 
-  {
-    page.data.length === 0 ? (
-      <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
-        <p class="font-bold">Sorry!</p>
-        <p>There are no blog posts to show at the moment. Check back later!</p>
-      </div>
-    ) : (
-      <ul>
-        {page.data.map((post) => (
-          <>
-            <HorizontalCard
-              title={post.data.title}
-              img={post.data.heroImage}
-              desc={post.data.description}
-              url={"/blog/" + createSlug(post.data.title, post.slug)}
-              target="_self"
-              badge={post.data.badge}
-              tags={post.data.tags}
-            />
-            <div class="divider my-0" />
-          </>
-        ))}
-      </ul>
-    )
-  }
+  <div class="container">
+    <!-- Première carte de certification -->
+    <div class="card">
+        <img src="/itemPreview.webp" alt="Certification Image">
+        <div class="card-content">
+            <h3 class="card-title">Certification de Cybersécurité</h3>
+            <div class="card-buttons">
+                <a class="button button-details" href="/CV-Mathias.pdf" target="_blank">Détails</a>
+                <a href="/CV-Mathias.pdf" download="CV-Mathias.pdf" target="_blank" class="button button-pdf">Télécharger</a>
+            </div>
+        </div>
+    </div>
 
-  <div class="flex justify-between">
-    {
-      page.url.prev ? (
-        <a href={page.url.prev} class="btn btn-ghost my-10 mx-5">
-          {" "}
-          <svg
-            class="h-6 w-6 fill-current md:h-8 md:w-8"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
-          </svg>{" "}
-          Recent posts
-        </a>
-      ) : (
-        <div />
-      )
-    }
-    {
-      page.url.next ? (
-        <a href={page.url.next} class="btn btn-ghost my-10 mx-5">
-          Older Posts{" "}
-          <svg
-            class="h-6 w-6 fill-current md:h-8 md:w-8"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            {" "}
-            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-          </svg>
-        </a>
-      ) : (
-        <div />
-      )
-    }
+    <!-- Deuxième carte de certification -->
+    <div class="card">
+        <img src="/itemPreview.webp" alt="Certification Image">
+        <div class="card-content">
+            <h3 class="card-title">Certification de Protection des Données</h3>
+            <div class="card-buttons">
+                <a class="button button-details" href="/CV-Mathias.pdf" target="_blank">Détails</a>
+                <a href="/CV-Mathias.pdf" download="CV-Mathias.pdf" target="_blank" class="button button-pdf">Télécharger</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Troisième carte de certification -->
+    <div class="card">
+        <img src="/itemPreview.webp" alt="Certification Image">
+        <div class="card-content">
+            <h3 class="card-title">Certification de Protection des Données</h3>
+            <div class="card-buttons">
+                <a class="button button-details" href="/CV-Mathias.pdf" target="_blank">Détails</a>
+                <a href="/CV-Mathias.pdf" download="CV-Mathias.pdf" target="_blank" class="button button-pdf">Télécharger</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quatrième carte de certification -->
+    <div class="card">
+        <img src="/itemPreview.webp" alt="Certification Image">
+        <div class="card-content">
+            <h3 class="card-title">Certification de Protection des Données</h3>
+            <div class="card-buttons">
+                <a class="button button-details" href="/CV-Mathias.pdf" target="_blank">Détails</a>
+                <a href="/CV-Mathias.pdf" download="CV-Mathias.pdf" target="_blank" class="button button-pdf">Télécharger</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cinquième carte de certification -->
+    <div class="card">
+        <img src="/itemPreview.webp" alt="Certification Image">
+        <div class="card-content">
+            <h3 class="card-title">Certification de Protection des Données</h3>
+            <div class="card-buttons">
+                <a class="button button-details" href="/CV-Mathias.pdf" target="_blank">Détails</a>
+                <a href="/CV-Mathias.pdf" download="CV-Mathias.pdf" target="_blank" class="button button-pdf">Télécharger</a>
+            </div>
+        </div>
+    </div>
+
   </div>
 </BaseLayout>
+
+<style>
+        /* Styles de base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            padding: 20px;
+            justify-content: center; /* Centrer le contenu si la ligne n'est pas complète */
+        }
+
+        .card {
+            flex: 1 1 calc(33.333% - 20px); /* Permet d'avoir trois cartes par ligne */
+            max-width: 300px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+           overflow: hidden;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #fff;
+        }
+
+        .button-details {
+            background-color: #007bff;
+        }
+
+        .button-pdf {
+            background-color: #28a745;
+        }
+
+        /* Styles pour la boîte modale */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 80%;
+            max-height: 90%;
+            overflow-y: auto;
+            text-align: center;
+        }
+
+        .modal img {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .cert-details {
+            margin-top: 10px;
+            color: #333;
+            font-size: 1em;
+        }
+</style>
