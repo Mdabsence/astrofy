@@ -5,7 +5,7 @@ custom_link_label: ""
 custom_link: ""
 updatedDate: "Nov 15 2024"
 pricing: "GLPI - Windows Serveur - DNS"
-badge: "En cours"
+badge: "CFA"
 checkoutUrl: ""
 heroImage: "/Veliko.png"
 ---

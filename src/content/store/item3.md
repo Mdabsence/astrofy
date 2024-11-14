@@ -5,7 +5,7 @@ custom_link_label: ""
 custom_link: ""
 updatedDate: "Sep 11 2022"
 pricing: "Cisco Packet Tracer"
-badge: "En cours"
+badge: "CFA"
 checkoutUrl: ""
 heroImage: "/PacketTracer.png"
 ---

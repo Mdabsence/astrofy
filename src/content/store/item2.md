@@ -5,7 +5,7 @@ custom_link_label: ""
 custom_link: ""
 updatedDate: "Sep 11 2022"
 pricing: "Astro - CSS - Java Script "
-oldPricing: ""
+badge: "CFA"
 checkoutUrl: ""
 heroImage: "/itemPreview.webp"
 ---
