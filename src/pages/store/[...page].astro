@@ -12,6 +12,14 @@ const { page } = Astro.props;
 ---
 
 <BaseLayout title="Store" sideBarActiveItemID="store">
+  <div>
+    <div class="text-3xl w-full font-bold mb-2 mt-10">Mes projets</div>
+  </div>
+  <div class="carousel-container">
+    <h2 class="carousel-header">Projets réalisés en CFA</h2>
+    <p class="carousel-subheader">Ci-dessous, vous retrouverez tous mes projets réalisés au CFA de l'ORT Montreuil Daniel Mayer lors de mes deux années de BTS SIO. Vous pouvez cliquer sur l'un deux pour en savoir plus !</p>
+  </div>
+
   <ul>
     {
       page.data.map((item) => (
@@ -77,3 +85,17 @@ const { page } = Astro.props;
     }
   </div>
 </BaseLayout>
+
+<style>
+  .carousel-header {
+      font-size: 24px;
+      color: #00274D;
+      margin-bottom: 5px;
+  }
+
+  .carousel-subheader {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #555;
+  }
+</style>

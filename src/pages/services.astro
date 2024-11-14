@@ -1,40 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
 <BaseLayout title="Projects" sideBarActiveItemID="services">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Services Header</div>
+    <div class="text-3xl w-full font-bold mb-5"></div>
   </div>
 
-  <HorizontalCard
-    title="Service 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    badge="NEW"
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Service 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Service 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Service 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
+  <iframe src="https://lyceeort-my.sharepoint.com/personal/mathias_dabsence_ortmontreuil_fr/_layouts/15/Doc.aspx?sourcedoc={3bcec574-3d0b-4e52-bfd0-10cb11c973c2}&amp;action=embedview&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1" width="879px" height="588px" frameborder="0">Ceci est un présentation <a target="_blank" href="https://office.com">Microsoft Office</a> incorporé, avec <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+
+  <div class="mt-8 flex justify-center">
+      <a class="btn" href="./public/Présentation.pdf" target="_blank"> Consulter ma présentation </a>
+      <a href="./public/Présentation.pptx" download="Présentation.pptx" target="_blank" class="btn btn-outline ml-5">
+        Télécharger ma présentation (.pptx)
+      </a>
+      <a href="./public/Présentation.pdf" download="Présentation.pdf" target="_blank" class="btn btn-outline ml-5">
+        Télécharger ma présentation (.pdf)
+      </a>
+  </div>
 </BaseLayout>
+
