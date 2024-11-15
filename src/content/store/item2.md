@@ -10,8 +10,20 @@ checkoutUrl: ""
 heroImage: "/portfolio.png"
 ---
 
-Contexte du projet :
+<b>Contexte du projet :</b> 
+</br>
+Dans le cadre de l'épreuve E5 du BTS SIO, j'ai du réaliser mon propre portfolio. Celui est important car il reflète mon parcours académique et met en avant mes compétences professionnelles acquises durant les deux années de ma formation en alternance.
 
-Objectifs :
+<b>Objectifs :</b>
+</br>
+Développer un portfolio regroupant :
+- Mon parcours d'études
+- Les compétences acquises pendant mon BTS SIO
+- La présentation de mon entreprise d'acceuil
+- Les projets réalisés en CFA et en entreprise
+- Mes certifications obtenus lors des 2 ans
+- Ma veille informatique
 
-Outils utilisés :
+<b>Outils utilisés :</b> 
+</br>
+Utilisation de la template faite par Manuel Ernesto : https://github.com/manuelernestog/astrofy

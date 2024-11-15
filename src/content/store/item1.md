@@ -15,7 +15,7 @@ heroImage: "/Veliko.png"
 Face à l'augmentation de l'utilisation des vélos en libre-service à Paris et en Île-de-France, il est devenu indispensable de fournir aux utilisateurs une solution digitale intuitive leur permettant de localiser facilement les stations et de connaître la disponibilité des vélos, y compris ceux à assistance électrique.
 
 <b>Objectifs :</b>
-</br>
+
 - Fournir une carte interactive (MAP) regroupant les données de localisation précises des 1400 stations.
 - Offrir une fonctionnalité de localisation personnelle pour centrer la MAP sur la position de l'utilisateur.
 - Distinguer clairement les vélos classiques des vélos à assistance électrique dans les informations détaillées de chaque station.

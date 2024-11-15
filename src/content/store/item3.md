@@ -10,13 +10,13 @@ checkoutUrl: ""
 heroImage: "/PacketTracer.png"
 ---
 
-Contexte du projet :
+<b>Contexte du projet :</b> 
 
-Objectifs :
+<b>Objectifs :</b> 
 
-Cahier des charges :
+<b>Cahier des charges :</b> 
 
-Répartition des tâches :
+<b>Répartition des tâches :</b> 
 
 (Outils utilisés :)
 
