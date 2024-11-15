@@ -7,7 +7,7 @@ updatedDate: "Sep 11 2022"
 pricing: ""
 badge: "Entreprise"
 checkoutUrl: ""
-heroImage: "/itemPreview.webp"
+heroImage: "/cablage.png"
 ---
 
 

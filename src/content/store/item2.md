@@ -7,7 +7,7 @@ updatedDate: "Sep 11 2022"
 pricing: "Astro - CSS - Java Script "
 badge: "CFA"
 checkoutUrl: ""
-heroImage: "/itemPreview.webp"
+heroImage: "/portfolio.png"
 ---
 
 Contexte du projet :
